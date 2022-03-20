@@ -1,0 +1,15 @@
+img = imread('C:\Users\Mainul Hassan\Documents\Image Database\papyaleaves.jpg');
+subplot(2,2,1); imshow(img);
+R = img(:,:,1);
+subplot(2,2,2), imshow(R);
+title('Red Component');
+G = img(:,:,2);
+subplot(2,2,3), imshow(G);
+title('Green Component');
+B = img(:,:,3);
+subplot(2,2,4), imshow(B);
+title('Blue Component');
+I = rgb2hsv(img);
+H =
+S =
+V =

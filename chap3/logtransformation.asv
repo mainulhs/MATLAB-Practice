@@ -1,0 +1,15 @@
+%log tranformations
+%s=clog(1+r) where c is constant and assumed that r>=0
+
+r=imread('D:\zainal\cg\DIP3E_Original_Images_CH03\Fig0305(a)(DFT_no_log).tif');
+I2=im2double(r)
+s1=1*log(1+I2);
+s2=2*log(1+I2);
+s3=3*log(1+I2);
+
+subplot(1,2,1);
+imshow(r);
+title('Fourier spectram')
+subplot(1,2,2),
+imshow(s);
+title('Result of applying the log transformation')

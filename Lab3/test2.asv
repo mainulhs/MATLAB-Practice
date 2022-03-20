@@ -1,0 +1,2 @@
+im = imread('');
+x = imtranslate(im, [5.3, -10.1], )

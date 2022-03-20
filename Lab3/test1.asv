@@ -1,0 +1,24 @@
+% edge detection using standard masks
+f=imread('.jpg');
+subplot(4,2,1);
+imshow(f);title('original image');
+I = rgb2gray(f);subplot(4,2,2);
+imshow(I);title('gray image');
+BW1=edge(I,'sobel');
+BW2=edge(I,'canny');
+BW3=edge(I,'prewitt');
+BW4=edge(I,'roberts');
+BW5 = edge(I,'log');
+BW6 = edge(I,'zerocross',0,'horizontal');
+subplot(4,2,3);
+imshow(BW1);title('sobel edge detector image');
+subplot(4,2,4);
+imshow(BW2);title('canny edge detector image');
+subplot(4,2,5);
+imshow(BW3);title('prewitt edge detector image');
+subplot(4,2,6);
+imshow(BW4);title('roberts edge detector image');
+subplot(4,2,7);
+imshow(BW5);title('Edge detection with log ');
+subplot(4,2,8);
+imshow(BW6);title('Edge detection with zerocorss'); 

@@ -1,0 +1,9 @@
+%Convert an RGB image to HSV
+I = imread('C:\Users\Mainul Hassan\Documents\Image Database\papyaleaves.jpg');     %Read in image
+Ihsv = rgb2hsv(I);            %Convert original to HSV image, I2
+V = histeq(Ihsv(:,:,3));      %Histogram equalise V (3rd) channel of I2
+Ihsv(:,:,3) 
+V;              %Copy equalized V plane into (3rd) channel I2
+Iout = hsv2rgb(Ihsv);         %Convert I2 back to RGB form
+subplot(1,2,1), imshow(I);  %Show image
+subplot(1,2,2), imshow(Iout);

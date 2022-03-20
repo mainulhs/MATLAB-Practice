@@ -1,0 +1,28 @@
+%Edge Detection..
+im = imread('C:\Users\Mainul Hassan\Documents\Image Database\tr.tif'); %Read Image
+subplot(3,2,1), imshow(im); title('Original Image');
+X = rgb2gray(img); %Convertion
+I = edge(X);
+
+% Sobal Method
+Sobal = edge(I,'sobel',[]);             % here thresh is empty ([]),If we want to add thresh ([0.5]).
+subplot(3,2,2); imshow(Sobal); title('EDGE detection by Sobal Method');
+
+% Roberts Method
+Roberts = edge(I, 'roberts', []);
+subplot(3,2,3); imshow(Roberts); title('EDGE detection by Roberts Method');
+
+% Prewitt Method
+Prewitt = edge(I, 'prewitt', []);
+subplot(3,2,4); imshow(Prewitt); title('EDGE detection by Prewitt Method');
+
+%Laplacian of Gaussian Method
+Log = edge()
+
+% Zero-Cross Method
+ZeroCross = edge(I, 'zerocross',0);
+subplot(3,2,5); imshow(ZeroCross); title('EDGE detection by Prewitt Method');
+
+% Canny Method
+Canny = edge(I, 'canny', []);
+subplot(3,2,6); imshow(Canny); title('EDGE detection by Roberts Method');
